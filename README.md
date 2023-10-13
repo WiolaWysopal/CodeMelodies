@@ -25,3 +25,16 @@ Aplikacja *CodeMelodies* oferuje następujące funkcje:
 Aplikację *CodeMelodies* wspierają następujące technologie:
 - FRONT-END: Agnular
 - BACK-END: Spring
+
+## LAB01
+Komendy Angular CLI:
+
+```bash ng new CodeMelodies --routing --skip-git --skip-tests --style css```
+
+- ``` ng new CodeMelodies``` - tworzy nowy projekt z zadanymi parametrami:
+
+ - ``` --routing ``` - dodaje moduł routingu do nowoutworzonego projektu
+ - ``` --skip git ``` -  pomija inicjalizację repozytorium Git dla nowego projektu
+ - ``` --skip-tests ``` -   pomija generowanie plików specyfikacji testów dla nowego projektu
+ - ``` --style css ``` -  definiuje technologię stylowania, która ma być używana w projekcie
+
