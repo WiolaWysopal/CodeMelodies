@@ -38,3 +38,24 @@ Komendy Angular CLI:
  - ``` --skip-tests ``` -   pomija generowanie plików specyfikacji testów dla nowego projektu
  - ``` --style css ``` -  definiuje technologię stylowania, która ma być używana w projekcie
 
+## LAB02
+
+### Endpointy API
+- **OMnieController**
+	- `[GET]`: `/omnie`
+- **YouTubeController:**
+	- `[GET]`: `/youtube`
+- **LoginController:**
+	- `[POST]`: `/login`
+	- `[POST]`: `/wyloguj`
+- **RegisterController:**
+	- `[POST]`: `/register`
+- **PublikacjeController:**
+	- `[GET]`: `/publikacje?token=TOKEN`
+- **ObrazyController:**
+	- `[GET]`: `/zdjecia`
+	- `[GET]`: `/ikona`
+- **KontaktController:**
+	- `[GET]`: `/kalendarz`
+	- `[GET]`: `/socialmedia`
+
