@@ -37,10 +37,13 @@ Komendy Angular CLI:
  - ``` --skip git ``` -  pomija inicjalizację repozytorium Git dla nowego projektu
  - ``` --skip-tests ``` -   pomija generowanie plików specyfikacji testów dla nowego projektu
  - ``` --style css ``` -  definiuje technologię stylowania, która ma być używana w projekcie
+ 
+ Aplikację Springową utworzono przy pomocy **Spring Initializr**.
 
 ## LAB02
 
 ### Endpointy API
+
 - **OMnieController**
 	- `[GET]`: `/omnie`
 - **YouTubeController:**
@@ -58,4 +61,6 @@ Komendy Angular CLI:
 - **KontaktController:**
 	- `[GET]`: `/kalendarz`
 	- `[GET]`: `/socialmedia`
+
+
 
