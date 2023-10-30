@@ -62,5 +62,5 @@ Komendy Angular CLI:
 	- `[GET]`: `/kalendarz`
 	- `[GET]`: `/socialmedia`
 
-
+Test enpointów możliwy jest pod adresem: http://localhost:8080/swagger-ui/index.html#/.
 
