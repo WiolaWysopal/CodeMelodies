@@ -1,3 +1,5 @@
+:: Trzeba uruchomić dockerowego daemona w aplikacji DockerDesktop
+
 :: Zatrzymuje wszystkie kontenery
 docker kill $(docker ps -aq)
 
