@@ -1,0 +1,26 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: CodeMelodies
+      POSTGRES_USER: wiola
+      POSTGRES_PASSWORD: ztpai
+    ports:
+      - "5432:5432"
+  app:
+    build:
+      context: ./BACKEND/codemelodies
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+  angular:
+    build:
+      context: ./FRONTEND/CodeMelodies
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - app

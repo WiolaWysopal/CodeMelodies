@@ -27,7 +27,7 @@ li {
 }
 
  li:first-child {
-    flex: 0.8;  
+    flex: 0.8;  /*dla pierwszego elementu list z paska*/
 } 
 
 li a {
