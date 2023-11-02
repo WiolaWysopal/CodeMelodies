@@ -1,0 +1,18 @@
+<p class="komunikat">Zaloguj się, aby uzyskać dostęp do materiałów</p>
+<!-- Linia poniżej to miejsce na komunikat -->
+<!-- <p class="error-message" *ngIf="showError">Błędny login lub hasło</p> -->
+<!-- <form (submit)="onSubmit()"> -->
+<form>
+    <div class="input-container">
+        <input type="text" id="username" name="username" placeholder="login" required>
+    </div>
+
+    <div class="input-container">
+        <input type="password" id="password" name="password" placeholder="hasło" required>
+    </div>
+
+    <div class="button-container">
+        <input type="submit" value="zaloguj się">
+        <input type="button" value="zarejestruj się">
+    </div>
+</form>

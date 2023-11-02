@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PasekComponent } from './pasek/pasek.component';
 import { TloComponent } from './tlo/tlo.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PasekComponent,
-    TloComponent
+    TloComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
