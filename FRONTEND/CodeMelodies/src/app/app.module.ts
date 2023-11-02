@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PasekComponent } from './pasek/pasek.component';
 import { TloComponent } from './tlo/tlo.component';
 import { LoginComponent } from './login/login.component';
+import { LoginErrorComponent } from './login-error/login-error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PasekComponent,
     TloComponent,
-    LoginComponent
+    LoginComponent,
+    LoginErrorComponent
   ],
   imports: [
     BrowserModule,

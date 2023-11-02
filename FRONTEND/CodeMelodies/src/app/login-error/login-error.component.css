@@ -1,0 +1,9 @@
+.login-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 160%;
+    color: #AF1036;
+    margin: 1.5em;
+    font-weight: bolder;
+}
