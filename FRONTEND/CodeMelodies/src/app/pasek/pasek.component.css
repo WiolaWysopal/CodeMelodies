@@ -40,3 +40,37 @@ li a {
 li a:hover {
     color: #121213;
 }
+
+/* Style dla urządzeń mobilnych */
+@media screen and (max-width: 768px) {
+    .pasek {
+        height: auto;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    li {
+        flex: none;
+        width: auto;
+        font-size: 150%;
+        margin-bottom: 0.5em;
+        justify-content: left;
+    }
+    
+    li a {
+        text-align: left;
+        padding-left: 1em;
+        margin-bottom: 0.3em;
+        border-bottom: 1px solid white;
+    }
+
+    li img {
+        height: 60%; width: 60%; 
+        padding: 0;
+        margin-left: 0;
+    }
+
+}
