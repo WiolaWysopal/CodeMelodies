@@ -1,0 +1,22 @@
+.yt {
+    position: relative;
+}
+
+.ytimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 3rem;
+}
+
+.ytnapis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: #ffffff;
+    margin: 1.5em;
+    font-weight: bolder;
+    padding-top: 3rem; /* taki sam jak wysokość obrazu */
+}

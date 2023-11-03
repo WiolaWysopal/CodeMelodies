@@ -6,3 +6,10 @@ html, body, app-root {
     height: 100%;
     width: 100%;
 }
+
+body {
+    font-family: 'Judson', serif;
+}
+ p, input{
+    letter-spacing: 0.03em;
+ }
