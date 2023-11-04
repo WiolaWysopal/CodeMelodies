@@ -6,4 +6,12 @@
     color: #AF1036;
     margin: 1.5em;
     font-weight: bolder;
+    width: auto;
+    height: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .login-error {
+        font-size: 140%;
+    }
+  }
