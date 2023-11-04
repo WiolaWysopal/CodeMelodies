@@ -1,5 +1,10 @@
 .yt {
+    display: flex;
+    flex-direction: row;
     position: relative;
+    width: auto;
+    height: auto;
+    justify-content: center;
 }
 
 .ytimg {
@@ -11,15 +16,15 @@
 }
 
 .ytnapis {
+    width: auto;
+    height: auto;
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 200%;
     color: #ffffff;
-    margin: 1.5em;
     font-weight: bolder;
-    padding-top: 3rem; /* taki sam jak wysokość obrazu */
+    margin: 2em;
 }
 
 
