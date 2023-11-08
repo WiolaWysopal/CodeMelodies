@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { PasekComponent } from './pasek/pasek.component';
 import { TloComponent } from './tlo/tlo.component';
 import { LoginComponent } from './login/login.component';
 import { LoginErrorComponent } from './login-error/login-error.component';
 import { RegisterComponent } from './register/register.component';
 import { YouTubenapisComponent } from './you-tubenapis/you-tubenapis.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { YouTubenapisComponent } from './you-tubenapis/you-tubenapis.component';
     LoginComponent,
     LoginErrorComponent,
     RegisterComponent,
-    YouTubenapisComponent
+    YouTubenapisComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
