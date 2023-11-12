@@ -1,11 +1,9 @@
 version: '3'
 services:
   postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_DB: CodeMelodies
-      POSTGRES_USER: wiola
-      POSTGRES_PASSWORD: ztpai
+    build:
+      context: ./DB
+      dockerfile: Dockerfile
     ports:
       - "5432:5432"
   app:

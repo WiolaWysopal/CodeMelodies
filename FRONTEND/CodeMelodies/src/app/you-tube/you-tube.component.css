@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Judson', serif;
+}
+ p, input{
+    letter-spacing: 0.03em;
+ }

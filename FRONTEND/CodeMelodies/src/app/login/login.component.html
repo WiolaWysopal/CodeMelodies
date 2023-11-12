@@ -7,15 +7,15 @@
 <!-- <form (submit)="onSubmit()"> -->
 <form>
     <div class="input-container">
-        <input type="text" id="username" name="username" placeholder="login" required>
+        <input type="text" id="login" name="login" [(ngModel)]="name" placeholder="login" required>
     </div>
 
     <div class="input-container">
-        <input type="password" id="password" name="password" placeholder="hasło" required>
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="hasło" required>
     </div>
 
     <div class="button-container">
         <input type="submit" value="zaloguj się">
-        <input type="button" value="zarejestruj się">
+        <input type="button" value="zarejestruj się" routerLink="/rejestracja">
     </div>
 </form>

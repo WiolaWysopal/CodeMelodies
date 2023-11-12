@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { LoginErrorComponent } from './login-error/login-error.component';
 import { RegisterComponent } from './register/register.component';
 import { YouTubenapisComponent } from './you-tubenapis/you-tubenapis.component';
+import { YouTubeComponent } from './you-tube/you-tube.component';
+import { FormsModule } from '@angular/forms';
+import { LogowanieComponent } from './logowanie/logowanie.component';
+import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 
 
 @NgModule({
@@ -21,11 +25,13 @@ import { YouTubenapisComponent } from './you-tubenapis/you-tubenapis.component';
     LoginErrorComponent,
     RegisterComponent,
     YouTubenapisComponent,
-    HomeComponent
+    HomeComponent, 
+    YouTubeComponent, LogowanieComponent, RejestracjaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

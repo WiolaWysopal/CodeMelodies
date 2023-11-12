@@ -35,6 +35,7 @@ li a {
     color: white;
     text-align: center;
     text-decoration: none;
+    z-index: 1;
 }
 
 li a:hover {
