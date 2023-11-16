@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { YouTubeComponent } from './you-tube/you-tube.component';
+import { YouTubeComponent } from './youtube/youtube.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 
