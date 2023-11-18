@@ -1,3 +1,5 @@
+------------------------------------------------ DDL (Definicje Tabel)
+
 -- Tabela użytkowników
 CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
@@ -23,9 +25,10 @@ CREATE TABLE SocialMediaIcons (
 
 -- Tabela wydarzeń
 CREATE TABLE Events (
-    event_id SERIAL PRIMARY KEY,
-    date DATE NOT NULL,
-    description TEXT
+    event_id BIGINT PRIMARY KEY,
+    nazwa VARCHAR(255),
+    data_rozpoczecia TIMESTAMP,
+    lokalizacja VARCHAR(255)
 );
 
 -- Tabela profili mediów społecznościowych
