@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.AllArgsConstructor;
+import java.util.UUID;
 
 import java.time.LocalDateTime;
 
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class Wydarzenie {
     @Id
     @Column(name = "event_id")
-    private Long id;
+    private UUID id;
     @Column(name = "nazwa")
     private String nazwa;
     @Column(name = "data_rozpoczecia")
