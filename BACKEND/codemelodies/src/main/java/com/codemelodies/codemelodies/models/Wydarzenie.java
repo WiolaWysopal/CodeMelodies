@@ -24,5 +24,5 @@ public class Wydarzenie {
     @Column(name = "lokalizacja")
     private String lokalizacja;
 
-    // Gettery i konstruktor all-args są automatycznie generowane przez Lombok
+    // Gettery generowane są przez Lombok
 }
