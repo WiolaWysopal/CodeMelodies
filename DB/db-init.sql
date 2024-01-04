@@ -18,9 +18,8 @@ CREATE TABLE Images (
 
 -- Tabela ikon mediów społecznościowych
 CREATE TABLE SocialMediaIcons (
-    icon_id SERIAL PRIMARY KEY,
-    platform_name VARCHAR(255) NOT NULL,
-    icon_url TEXT NOT NULL
+    icon_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    image BYTEA
 );
 
 -- Tabela wydarzeń
@@ -33,10 +32,10 @@ CREATE TABLE Events (
 
 -- Tabela profili mediów społecznościowych
 CREATE TABLE SocialMediaProfiles (
-    profile_id SERIAL PRIMARY KEY,
-    user_id uuid NOT NULL,
+    medium_name VARCHAR(255) PRIMARY KEY,
     profile_url TEXT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    icon_id UUID,
+    FOREIGN KEY (icon_id) REFERENCES SocialMediaIcons(icon_id)
 );
 
 -- Tabela relacji między użytkownikami a wydarzeniami (dla relacji wiele do wielu)
@@ -48,10 +47,7 @@ CREATE TABLE UserEvents (
     FOREIGN KEY (event_id) REFERENCES Events(event_id)
 );
 
--- Tabela biogramów użytkowników (relacja jeden do jednego)
-CREATE TABLE UserBiographies (
-    user_id uuid UNIQUE NOT NULL,
-    biography TEXT,
-    PRIMARY KEY (user_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+CREATE TABLE Biograms (
+    biogram_timestamp_id TIMESTAMP PRIMARY KEY DEFAULT NOW(),
+    biogram_content TEXT
 );

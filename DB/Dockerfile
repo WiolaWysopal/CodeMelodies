@@ -14,14 +14,24 @@ ENV POSTGRES_PASSWORD ztpai
 
 # Copy SQL scripts to the /docker-entrypoint-initdb.d/ directory in the container
 COPY db-init.sql /docker-entrypoint-initdb.d/10-db-init.sql
-COPY insert-dummies.sql /docker-entrypoint-initdb.d/30-insert-dummies.sql
+COPY insert-dummies.sql /docker-entrypoint-initdb.d/80-insert-dummies.sql
 COPY generate-image-insert-sql.sh /tmp/generate-image-insert-sql.sh
+COPY generate-icon-insert-sql.sh /tmp/generate-icon-insert-sql.sh
 
 # Convert line endings to Unix format
 RUN dos2unix /tmp/generate-image-insert-sql.sh
+RUN dos2unix /tmp/generate-icon-insert-sql.sh
 
 # Copy dummy images to tmp directory
 COPY ./dummy-images/ /tmp/images/
 
+# Generate sql with text encoded images
 RUN chmod +x /tmp/generate-image-insert-sql.sh && \
     /tmp/generate-image-insert-sql.sh
+
+# Copy dummy icons to tmp directory
+COPY ./dummy-icons/ /tmp/icons
+
+# Generate sql with text encoded images
+RUN chmod +x /tmp/generate-icon-insert-sql.sh && \
+    /tmp/generate-icon-insert-sql.sh
