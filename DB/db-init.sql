@@ -51,3 +51,11 @@ CREATE TABLE Biograms (
     biogram_timestamp_id TIMESTAMP PRIMARY KEY DEFAULT NOW(),
     biogram_content TEXT
 );
+
+CREATE TABLE public.youtubevideos (
+	video_id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+	title text NOT NULL,
+	url text NOT NULL,
+	default_width int NOT NULL DEFAULT 280,
+	default_height int NOT NULL DEFAULT 156
+);
