@@ -35,16 +35,8 @@ CREATE TABLE SocialMediaProfiles (
     medium_name VARCHAR(255) PRIMARY KEY,
     profile_url TEXT NOT NULL,
     icon_id UUID,
+    -- TODO: DODAĆ NOT NULL do UUID
     FOREIGN KEY (icon_id) REFERENCES SocialMediaIcons(icon_id)
-);
-
--- Tabela relacji między użytkownikami a wydarzeniami (dla relacji wiele do wielu)
-CREATE TABLE UserEvents (
-    user_id uuid,
-    event_id UUID,
-    PRIMARY KEY (user_id, event_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (event_id) REFERENCES Events(event_id)
 );
 
 CREATE TABLE Biograms (
@@ -58,4 +50,16 @@ CREATE TABLE public.youtubevideos (
 	url text NOT NULL,
 	default_width int NOT NULL DEFAULT 280,
 	default_height int NOT NULL DEFAULT 156
+);
+
+CREATE TABLE public.publication_files (
+    publication_file_id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    file bytea NOT NULL
+);
+
+CREATE TABLE public.publications (
+	publication_id uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+	title text NOT NULL,
+    publication_file_id uuid NOT NULL,
+    FOREIGN KEY (publication_file_id) REFERENCES publication_files(publication_file_id)
 );
