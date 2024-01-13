@@ -9,13 +9,19 @@ import { YouTubeComponent } from './you-tube/you-tube.component';
 import { ZdjeciaComponent } from './zdjecia/zdjecia.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { PublikacjeComponent } from './publikacje/publikacje.component';
+import { SafeUrlPipe } from 'src/SafeUrlPipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent, 
-    NavbarComponent, YouTubeComponent, ZdjeciaComponent, KontaktComponent, PublikacjeComponent
+    NavbarComponent, 
+    YouTubeComponent,
+    ZdjeciaComponent,
+    KontaktComponent,
+    PublikacjeComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

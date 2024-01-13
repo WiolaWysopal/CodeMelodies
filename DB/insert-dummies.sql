@@ -20,7 +20,10 @@ INSERT INTO public.socialmediaprofiles (medium_name,profile_url,icon_id) VALUES
 INSERT INTO public.youtubevideos (video_id,title,url,default_width,default_height) VALUES
 	 ('7bb6b809-60e0-4ddd-8a41-d0828a51969f','Johann Nepomuk Hummel (1778 - 1837) - Flute Sonata in D major, Op. 50, Andante - Rondo','https://www.youtube.com/embed/6WyUL2z9nuM?si=Ea72LNRrKwwexDma',280,156),
 	 ('1ba57c63-340d-4ba4-8262-36e753a7d524','Johann Nepomuk Hummel (1778 - 1837) - Flute Sonata in D major, Op. 50, Allegro con brio','https://www.youtube.com/embed/arxIC9JO3-8?si=OvU28c1YP9nGA4b0',280,156),
-	 ('f5ad7955-3a43-45f5-92a9-bba05eaa5ced','[M.] Deluse - VIII Caprice','https://www.youtube.com/embed/bzqcKMfKNm0?si=TiNFRMoJjLyfJ1pJ',280,156);
+	 ('f5ad7955-3a43-45f5-92a9-bba05eaa5ced','[M.] Deluse - VIII Caprice','https://www.youtube.com/embed/bzqcKMfKNm0?si=TiNFRMoJjLyfJ1pJ',280,156),
+	 ('f950b889-ec3e-4e31-a9e3-b80c66f40e59','Franz Anton Hoffmeister (1754 - 1812) - Allegro, Duo I (Concertant Duets for Flute and Viola)','https://www.youtube.com/embed/EdfKNR4LCvw?si=2n0ABoVJPPj-5Zps',280,156),
+	 ('d06fff67-62e4-4b31-9cef-98d8a8e03121','Franz Anton Hoffmeister (1754 - 1812) – Poco Adagio, Duo I (Concertant Duets for Flute and Viola)','https://www.youtube.com/embed/MrAlUFQuvR4?si=meTiVkf3q8CYL4jm',280,156),
+	 ('b1cf79b9-3f71-4cae-9d8f-b56137978282','Franz Anton Hoffmeister (1754 - 1812) - Allegro, Duo I (Concertant Duets for Flute and Viola)','https://www.youtube.com/embed/EdfKNR4LCvw?si=zgKpNTk8hxrrty_N',280,156);
 
 
 

@@ -1,1 +1,14 @@
-<p>you-tube works!</p>
+<div class="row">
+    <div *ngFor="let video of videos" class="col-xl-4 d-flex">
+        <div class="card bg-dark text-white w-100 mt-4">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ video.title }}</h5>
+                <div class="mt-auto">
+                    <div class="row embed-responsive embed-responsive-16by9">
+                        <iframe [src]="video.url | safeUrl" class="embed-responsive-item"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
