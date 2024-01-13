@@ -12,10 +12,10 @@ INSERT INTO Biograms (biogram_content)
 VALUES ('Wioletta Wysopal ukończyła z wyróżnieniem Akademię Muzyczną im. Krzysztofa Pendereckiego w Krakowie w klasie fletu traverso dr. hab. Małgorzaty Wojciechowskiej. Ponadto ukończyła również Państwową Szkołę Muzyczną I i II stopnia w Nowym Sączu w klasie fletu poprzecznego Ewy Dębskiej. Szczególne zainteresowanie muzyką dawną przejawiała już od najwcześniejszych lat edukacji. Umiejętności i warsztat doskonali poprzez branie udziału w Akademiach Muzyki Dawnej w kraju i zagranicą. Koncertuje jako solistka i kameralistka grając na instrumencie barokowym oraz klasycznym, a także na współczesnym flecie poprzecznym. Współpracowała z Zabrzańskim Klubem Muzycznym Fortepianarium, z zespołem Concerto Polacco, z Orkiestrą Barokową macierzystej uczelni oraz kilkukrotnie uczestniczyła także w krakowskich festiwalach muzycznych Dni Bachowskie oraz Kraków Bach Festival. Prywatnie interesuje się również szeroko pojętą lingwistyką, biotechnologią oraz inżynierią komputerową. W związku z ostatnim podjęła studia na Politechnice Krakowskiej im. Tadeusza Kościuszki na kierunku Informatyka, obecnie studiując na czwartym roku studiów inżynierskich. Ponadto od 2022 roku jest członkiem Polskiego Towarzystwa Bachowskiego.');
 
 INSERT INTO public.socialmediaprofiles (medium_name,profile_url,icon_id) VALUES
-	 ('LinkedIn','https://linkedin.com/profile','96213944-8d4a-4ee4-afc2-faadf428ed35'),
-	 ('Facebook','https://facebook.com/profile','ffa93ce5-c831-4597-ac6d-074aed30d27c'),
-	 ('Gmail','https://gmail.com/profile','66b94b75-9ca6-4e11-b3f1-7dc5d062a257'),
-	 ('YouTube','https://youtube.com/profile','7cbb2168-5ce3-4c2e-b2dc-fedd1e4e04f0');
+	 ('LinkedIn','https://www.linkedin.com/in/wioletta-wysopal-54312419a/','96213944-8d4a-4ee4-afc2-faadf428ed35'),
+	 ('Facebook','https://www.facebook.com/wiola.wysopal/','ffa93ce5-c831-4597-ac6d-074aed30d27c'),
+	 ('Gmail','mailto:wioletta.wysopal@gmail.com','66b94b75-9ca6-4e11-b3f1-7dc5d062a257'),
+	 ('YouTube','https://www.youtube.com/@wiolettawysopal-traverso2608','7cbb2168-5ce3-4c2e-b2dc-fedd1e4e04f0');
 
 INSERT INTO public.youtubevideos (video_id,title,url,default_width,default_height) VALUES
 	 ('7bb6b809-60e0-4ddd-8a41-d0828a51969f','Johann Nepomuk Hummel (1778 - 1837) - Flute Sonata in D major, Op. 50, Andante - Rondo','https://www.youtube.com/embed/6WyUL2z9nuM?si=Ea72LNRrKwwexDma',280,156),

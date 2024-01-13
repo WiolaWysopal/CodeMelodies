@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-zdjecia',
@@ -6,5 +7,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./zdjecia.component.css']
 })
 export class ZdjeciaComponent {
+  zdjecia: any[] = [];
+  private apiUrl = 'http://localhost:8080/api/zdjecia/ids';
+  private photoBaseUrl = 'http://localhost:8080/api/zdjecie/';
 
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.fetchZdjecia();
+  }
+
+  fetchZdjecia() {
+    this.http.get<any[]>(this.apiUrl).subscribe(
+      data => data.forEach(id => this.fetchPhoto(id)),
+      err => console.error(err)
+    );
+  }
+
+  fetchPhoto(id: string) {
+    const photoUrl = this.photoBaseUrl + id; // Construct the URL for each photo
+    this.http.get(photoUrl, { responseType: 'blob' }).subscribe(
+      blob => {
+        const objectURL = URL.createObjectURL(blob);
+        this.zdjecia.push({ id: id, url: objectURL });
+      },
+      err => console.error(err)
+    );
+  }
 }

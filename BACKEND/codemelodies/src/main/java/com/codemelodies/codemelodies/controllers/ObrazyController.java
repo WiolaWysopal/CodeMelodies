@@ -38,14 +38,16 @@ public class ObrazyController {
         } else {
             return ResponseEntity.notFound().build();
         }
-    }
+    }//ba5ae4f1-377d-4721-b690-a6edeba36449
 
     @GetMapping(value = "/zdjecia/ids", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UUID>> getZdjeciaIds() {
         //logger.info("");
+        UUID excludedUuid = UUID.fromString("ba5ae4f1-377d-4721-b690-a6edeba36449");
         List<Obraz> obrazy = obrazRepository.findAll();
         List<UUID> ids = obrazy.stream()
                 .map(Obraz::getId)
+                .filter(id -> !id.equals(excludedUuid))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(ids);
     }
