@@ -1,1 +1,14 @@
-<p>publikacje works!</p>
+<div class="row">
+    <div *ngFor="let publication of publications" class="col-xl-4 d-flex">
+        <div class="card bg-dark text-white w-100 mt-4">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ publication.title }}</h5>
+                <div class="mt-auto text-center">
+                    <div>
+                        <button (click)="downloadFile(publication.publicationFileId)" class="btn btn-light">&nbsp;&nbsp;&nbsp;Otwórz &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
