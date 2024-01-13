@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "clean": "rmdir /S /Q \"node_modules\" & rmdir /S /Q \".\\.angular\\cache\""
   },
   "private": true,
   "dependencies": {
