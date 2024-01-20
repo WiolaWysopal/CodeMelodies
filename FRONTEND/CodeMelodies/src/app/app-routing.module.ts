@@ -5,6 +5,7 @@ import { YouTubeComponent } from './you-tube/you-tube.component';
 import { PublikacjeComponent } from './publikacje/publikacje.component';
 import { ZdjeciaComponent } from './zdjecia/zdjecia.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { LogowanieComponent } from './logowanie/logowanie.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'youtube', component: YouTubeComponent, pathMatch: 'full'},
   {path: 'publikacje', component: PublikacjeComponent, pathMatch: 'full'},
   {path: 'zdjecia', component: ZdjeciaComponent, pathMatch: 'full'},
-  {path: 'kontakt', component: KontaktComponent, pathMatch: 'full'}
+  {path: 'kontakt', component: KontaktComponent, pathMatch: 'full'},
+  {path: 'logowanie', component: LogowanieComponent, pathMatch: 'full'}
 ];
 
 

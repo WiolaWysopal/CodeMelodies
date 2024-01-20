@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4 mt-5">
+        <!-- Login Form -->
+        <div class="card" style="background-color: #ddd">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Zaloguj Się</h4>
+            <form (ngSubmit)="login()">
+              <!-- Username Field -->
+              <div class="mb-3">
+                <input type="text" class="form-control" id="username" placeholder="Nazwa Użytkownika" [(ngModel)]="username" name="username">
+              </div>
+              <!-- Password Field -->
+              <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Hasło" [(ngModel)]="password" name="password">
+              </div>
+              <!-- Sign In Button -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary" style="border:0px" [ngStyle]="loginButtonStyle">Zaloguj</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

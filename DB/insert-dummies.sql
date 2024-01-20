@@ -8,6 +8,11 @@ INSERT INTO Events (nazwa, data_rozpoczecia, lokalizacja) VALUES
 INSERT INTO Biograms (biogram_timestamp_id, biogram_content)
 VALUES ('2023-12-31 00:00:00', 'Text for the last day of 2023');
 
+INSERT INTO Users (user_name, password, role)
+VALUES
+    ('user', 'user', 'ROLE_USER'),
+	('admin', 'admin', 'ROLE_ADMIN');
+
 INSERT INTO Biograms (biogram_content)
 VALUES ('Wioletta Wysopal ukończyła z wyróżnieniem Akademię Muzyczną im. Krzysztofa Pendereckiego w Krakowie w klasie fletu traverso dr. hab. Małgorzaty Wojciechowskiej. Ponadto ukończyła również Państwową Szkołę Muzyczną I i II stopnia w Nowym Sączu w klasie fletu poprzecznego Ewy Dębskiej. Szczególne zainteresowanie muzyką dawną przejawiała już od najwcześniejszych lat edukacji. Umiejętności i warsztat doskonali poprzez branie udziału w Akademiach Muzyki Dawnej w kraju i zagranicą. Koncertuje jako solistka i kameralistka grając na instrumencie barokowym oraz klasycznym, a także na współczesnym flecie poprzecznym. Współpracowała z Zabrzańskim Klubem Muzycznym Fortepianarium, z zespołem Concerto Polacco, z Orkiestrą Barokową macierzystej uczelni oraz kilkukrotnie uczestniczyła także w krakowskich festiwalach muzycznych Dni Bachowskie oraz Kraków Bach Festival. Prywatnie interesuje się również szeroko pojętą lingwistyką, biotechnologią oraz inżynierią komputerową. W związku z ostatnim podjęła studia na Politechnice Krakowskiej im. Tadeusza Kościuszki na kierunku Informatyka, obecnie studiując na czwartym roku studiów inżynierskich. Ponadto od 2022 roku jest członkiem Polskiego Towarzystwa Bachowskiego.');
 

@@ -3,10 +3,10 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ------------------------------------------------ DDL (Definicje Tabel)
 
 -- Tabele użydowników
-CREATE TABLE users (
-    id BIGINT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+CREATE TABLE Users (
+    user_name VARCHAR(255) PRIMARY KEY NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(255)
 );
 
 -- Tabela obrazów
