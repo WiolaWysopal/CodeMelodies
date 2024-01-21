@@ -1,9 +1,19 @@
 ------------------------------------------------ DML (Dummy Data)
 
--- Tabela wydarzeń - Dane
-INSERT INTO Events (nazwa, data_rozpoczecia, lokalizacja) VALUES
-('Koncert Barokowy: Vivaldi', '2023-12-01 19:00:00', 'Filharmonia Narodowa, Warszawa'),
-('Wieczór z Bachem', '2023-12-10 19:30:00', 'Teatr Wielki, Poznań');
+
+INSERT INTO Events (event_id, nazwa, data_rozpoczecia, lokalizacja) VALUES
+('04f08c90-5338-42ef-92df-a68196d2c20e','Wieczór z Bachem', '2023-12-10 19:30:00', 'Teatr Wielki, Poznań'),
+('140b3fb3-363e-4b6f-9c2f-a741c2696888','Koncert Barokowy: Vivaldi', '2023-12-01 19:00:00', 'Filharmonia Narodowa, Warszawa');
+
+INSERT INTO tags (name, color) VALUES
+('Wstęp Wolny', '#4c604b'),
+('Występ Solo', '#544b60');
+
+
+INSERT INTO Events_to_tags (event_id, tag_name) VALUES
+('140b3fb3-363e-4b6f-9c2f-a741c2696888','Wstęp Wolny'),
+('04f08c90-5338-42ef-92df-a68196d2c20e','Wstęp Wolny'),
+('04f08c90-5338-42ef-92df-a68196d2c20e','Występ Solo');
 
 INSERT INTO Biograms (biogram_timestamp_id, biogram_content)
 VALUES ('2023-12-31 00:00:00', 'Text for the last day of 2023');

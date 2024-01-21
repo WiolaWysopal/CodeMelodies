@@ -1,10 +1,10 @@
 package com.codemelodies.codemelodies.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
+
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 import java.time.LocalDateTime;
@@ -24,5 +24,10 @@ public class Wydarzenie {
     @Column(name = "lokalizacja")
     private String lokalizacja;
 
-    // Gettery generowane są przez Lombok
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "events_to_tags",
+            joinColumns = { @JoinColumn(name = "event_id") },
+            inverseJoinColumns = { @JoinColumn(name = "tag_name") })
+    Set<EventTag> tags = new HashSet<>();
 }

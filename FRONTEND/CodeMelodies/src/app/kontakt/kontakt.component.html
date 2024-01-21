@@ -6,6 +6,7 @@
             <th class="fs-3">Nazwa</th>
             <th class="fs-3">Data Rozpoczęcia</th>
             <th class="fs-3">Lokalizacja</th>
+            <th class="fs-3">Tagi</th>
           </tr>
         </thead>
         <tbody>
@@ -13,6 +14,11 @@
             <td class="fs-4">{{ event.nazwa }}</td>
             <td class="fs-4">{{ event.dataRozpoczecia | date: 'medium' }}</td>
             <td class="fs-4">{{ event.lokalizacja }}</td>
+            <td class="fs-6 d-flex flex-column align-content-center justify-content-center">
+              <p *ngFor="let tag of event.tagi"  class="p-2 badge rounded-pill" [ngStyle]="{'background-color': tag.color}">
+                  {{ tag.name }}
+              </p>
+            </td>
           </tr>
         </tbody>
       </table>

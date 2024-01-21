@@ -1,11 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+interface Tag {
+  name: string;
+  color: string;
+}
 interface Event {
   id: string;
   nazwa: string;
   dataRozpoczecia: string;
   lokalizacja: string;
+  tagi: Tag[];
 } 
 
 interface SocialMedia {

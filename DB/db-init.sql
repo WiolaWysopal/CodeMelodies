@@ -29,13 +29,27 @@ CREATE TABLE Events (
     lokalizacja VARCHAR(255)
 );
 
+CREATE TABLE Tags (
+    name VARCHAR(255) PRIMARY KEY,
+    color VARCHAR(7) NOT NULL
+);
+
+CREATE TABLE Events_to_tags (
+    event_id UUID NOT NULL,
+    tag_name VARCHAR(255),
+    PRIMARY KEY (event_id, tag_name),
+    FOREIGN KEY (event_id) REFERENCES Events(event_id),
+    FOREIGN KEY (tag_name) REFERENCES Tags(name)
+);
+
 -- Tabela profili mediów społecznościowych
 CREATE TABLE SocialMediaProfiles (
-    medium_name VARCHAR(255) PRIMARY KEY,
+    medium_name VARCHAR(255) NOT NULL,
     profile_url TEXT NOT NULL,
-    icon_id UUID,
-    -- TODO: DODAĆ NOT NULL do UUID
-    FOREIGN KEY (icon_id) REFERENCES SocialMediaIcons(icon_id)
+    icon_id UUID NOT NULL,
+    CONSTRAINT socialmediaprofiles_pkey PRIMARY KEY (medium_name),
+    CONSTRAINT socialmediaprofiles_icon_id_key UNIQUE (icon_id),
+    CONSTRAINT socialmediaprofiles_icon_id_fk FOREIGN KEY (icon_id) REFERENCES SocialMediaIcons (icon_id)
 );
 
 CREATE TABLE Biograms (
