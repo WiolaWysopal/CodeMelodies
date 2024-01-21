@@ -18,7 +18,7 @@ Aplikacja *CodeMelodies* oferuje następujące funkcje:
 ## Struktura projektu
 
 ### Wybrane frameworki:
-**Frontend**: _Angular CLI_:
+**Frontend**: _Angular_:
 
 ```bash ng new CodeMelodies --routing --skip-git --skip-tests --style css```
 
@@ -95,21 +95,28 @@ W przypadku tego projektu do komunikacji warstwy Frontendu z Backendem wykorzyst
 
 ### Baza danych
 #### ERD:
+![ER Diagram](image-4.png)
 
 #### Złożoność bazy danych:
 
 Baza danych zawiera wszystkie typy relacji:
-- jeden-do-jednego
+- jeden-do-jednego:
+	- jednej ikonie przynależy jedno social media
 - jeden-do-wielu
+	- jeden plik może zawierać wiele publikacji
 - wiele-do-wielu
+	- wiele wydarzeń może mieć wiele tagów
 
 #### ORM/JPA/ODM
 Jako narzędzie ORM (_Object-Relational Mapping_), wykorzystano _Hibernate_. W połączeniu z bazą danych PostgreSQL, stanowi on solidne i wydajne rozwiązanie dla zarządzania warstwą danych. _Hibernate_ ułatwia mapowanie obiektów Java na tabele w bazie danych PostgreSQL, co pozwala na intuicyjne i obiektowe zarządzanie danymi. Dzięki _Hibernate_, złożoność operacji na bazie danych jest ukryta za prostszym interfejsem, co przekłada się na większą czytelność i łatwość utrzymania kodu.
 
 _Dependency_ odpowiedzialne za dodanie _Hibernate_'a:
+
 ![Hibernate Dependency in pom.xml](image.png)
 
 #### Kopia bazy danych:
+
+Kopię bazy danych stanowią pliki _.sql_ dostępne w folderze DB. Plik `db-init.sql` tworzy bazę danych, natomiast plik `insert-dummies.sql` wypełnia bazę odpowiednimi danymi.
 
 ### GIT
 Projekt wykorzystuje system kontroli wersji GIT hostowany przez platformę _GitHub_: `https://github.com/WiolaWysopal/CodeMelodies.git`
@@ -117,5 +124,11 @@ Projekt wykorzystuje system kontroli wersji GIT hostowany przez platformę _GitH
 ### Autoryzacja użytkownika
 
 W projekcie wykorzystano mechanizm _Basic Autentication_, który realizuje poniższa dependencja:
+
 ![Authentication Dependency in pom.xml](image-2.png)
+
 Zależność _spring-boot-starter-security_ jest zależnością Spring Boot, która umożliwia łatwą integrację i konfigurację _Spring Security_ w aplikacji. _Spring Security_ zapewnia bezpieczeństwo aplikacji poprzez uwierzytelnienie i autoryzację użytkowników. Dzięki tej zależności możliwa jest implementacja bezpiecznego logowania i zarządzanie dostępem do różnych części aplikacji. _Spring Security_ wspiera szeroki zakres opcji uwierzytelniania, w tym logowanie oparte na formularzach, uwierzytelnianie za pomocą _OAuth2_ oraz _HTTP Basic Authentication_. Umożliwia również definiowanie reguł dotyczących dostępu do zasobów aplikacji, co pozwala na precyzyjne kontrolowanie, który użytkownik ma dostęp do określonych funkcji lub danych w aplikacji.
+
+Autentykacja w projekcie:
+
+![LoginController.java](image-5.png)
