@@ -45,23 +45,11 @@ Kluczową jednak rolę w doborze architektury stanowią osobiste zainteresowania
 
 #### Użycie API przez aplikację kliencką
 
-**register-controller**
-- `POST`
-	- `/api/register`
-
 **login-controller**
 - `POST`
-	- `/api/login/wyloguj`
+	- `/api/logout`
 - `GET`
-	- `/api/login/zaloguj`
-
-**obrazy-controller**
-- `GET`
-	- `/api/zdjecie/{uuid}`
-- `GET`
-	- `/api/zdjecia/ids`
-- `GET`
-	- `/api/ikona/{uuid}`
+	- `/api/login`
 
 **you-tube-controller**
 - `GET`
@@ -69,26 +57,34 @@ Kluczową jednak rolę w doborze architektury stanowią osobiste zainteresowania
 
 **kontakt-controller**
 - `GET`
-	- `/api/wydarzenia`
-- `GET`
 	- `/api/socialmedia`
+- `GET`
+	- `/api/events`
 
 **publikacje-controller**
 - `GET`
-	- `/api/publikacje`
+	- `/api/publications`
 - `GET`
-	- `/api/publikacja/{uuid}`
+	- `/api/publication/{uuid}`
+
+**obrazy-controller**
+- `GET`
+	- `/api/photosids`
+- `GET`
+	- `/api/photo/{uuid}`
+- `GET`
+	- `/api/icon/{uuid}`
 
 **o-mnie-controller**
 - `GET`
-	- `/api/omnie`
+	- `/api/about`
 
 #### Dokumentacja SWAGGER: 
 
 Zależność _springdoc-openapi-starter-webmvc-ui_ jest elementem integracji dokumentacji API z aplikacjami Spring Boot. Ta zależność, będąca częścią biblioteki _SpringDoc_, automatycznie generuje dokumentację API zgodną ze specyfikacją OpenAPI 3 na podstawie kodu źródłowego aplikacji. W szczególności analizuje kontrolery Springa, ich metody, parametry i modele danych, tworząc z nich dokładny opis API. Dodatkowo dostarcza interfejs użytkownika Swagger UI, który umożliwia testowanie dokumentacji API bezpośrednio z przeglądarki. 
 ![Swagger Dependency in pom.xml](image-1.png)
 Test enpointów możliwy jest pod adresem: http://localhost:8080/swagger-ui/index.html#/:
-![Endpoints on Swagger](image-3.png)
+![Endpoints on Swagger](image-6.png)
 
 ### Rest API/GRAPH QL
 W przypadku tego projektu do komunikacji warstwy Frontendu z Backendem wykorzystano Rest API. Do testowania Rest API wykorzystano Swagger UI.
@@ -100,11 +96,11 @@ W przypadku tego projektu do komunikacji warstwy Frontendu z Backendem wykorzyst
 #### Złożoność bazy danych:
 
 Baza danych zawiera wszystkie typy relacji:
-- jeden-do-jednego:
+- _jeden-do-jednego_:
 	- jednej ikonie przynależy jedno social media
-- jeden-do-wielu
+- _jeden-do-wielu_
 	- jeden plik może zawierać wiele publikacji
-- wiele-do-wielu
+- _wiele-do-wielu_
 	- wiele wydarzeń może mieć wiele tagów
 
 #### ORM/JPA/ODM
@@ -131,4 +127,4 @@ Zależność _spring-boot-starter-security_ jest zależnością Spring Boot, kt�
 
 Autentykacja w projekcie:
 
-![LoginController.java](image-5.png)
+![LoginController.java](image-7.png)
