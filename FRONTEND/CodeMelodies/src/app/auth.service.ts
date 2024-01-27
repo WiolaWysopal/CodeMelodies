@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   public logout() {
-    this.http.post('http://localhost:8080/api/login/logout', {}).subscribe({
+    this.http.post('http://localhost:8080/api/logout', {}).subscribe({
       next: (response) => {
         // Handle response
         console.log('Logged out successfully', response);

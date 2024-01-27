@@ -23,7 +23,7 @@ export class LogowanieComponent implements OnInit{
       'Authorization': 'Basic ' + encodedCredentials
     });
 
-    this.http.get('http://localhost:8080/api/login/login', { headers: headers, responseType: 'text' })
+    this.http.get('http://localhost:8080/api/login', { headers: headers, responseType: 'text' })
       .subscribe(
         data => {
           console.log('Login successful', data);

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ZdjeciaComponent {
   zdjecia: any[] = [];
-  private apiUrl = 'http://localhost:8080/api/photos/ids';
+  private apiUrl = 'http://localhost:8080/api/photosids';
   private photoBaseUrl = 'http://localhost:8080/api/photo/';
 
   constructor(private http: HttpClient) {}

@@ -42,9 +42,8 @@ public class ObrazyController {
         }
     }
 
-    @GetMapping(value = "/photos/ids", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/photosids", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UUID>> getZdjeciaIds() {
-        //logger.info("");
         UUID excludedUuid = UUID.fromString("ba5ae4f1-377d-4721-b690-a6edeba36449");
         List<Obraz> obrazy = obrazRepository.findAll();
         List<UUID> ids = obrazy.stream()
