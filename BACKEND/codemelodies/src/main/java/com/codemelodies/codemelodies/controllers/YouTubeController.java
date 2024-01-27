@@ -1,5 +1,4 @@
 package com.codemelodies.codemelodies.controllers;
-import com.codemelodies.codemelodies.models.Obraz;
 import com.codemelodies.codemelodies.models.YouTubeVideo;
 import com.codemelodies.codemelodies.repositories.YouTubeVideoRepository;
 import org.springframework.http.HttpStatus;
@@ -9,10 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
 
 
 @RestController

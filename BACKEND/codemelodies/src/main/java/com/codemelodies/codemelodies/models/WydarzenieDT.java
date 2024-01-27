@@ -1,7 +1,5 @@
 package com.codemelodies.codemelodies.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
