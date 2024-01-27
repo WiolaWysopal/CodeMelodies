@@ -30,7 +30,7 @@ public class KontaktController {
         this.mediaProfileRepository = mediaProfileRepository;
     }
 
-    @GetMapping("/wydarzenia")
+    @GetMapping("/events")
     public ResponseEntity<List<WydarzenieDT>> getWydarzenia() {
         List<Wydarzenie> wydarzenia = wydarzenieRepository.findAll();
         if (wydarzenia == null || (wydarzenia.isEmpty())){

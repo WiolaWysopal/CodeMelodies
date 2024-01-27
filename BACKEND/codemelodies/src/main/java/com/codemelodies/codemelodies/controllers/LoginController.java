@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class LoginController {
     SecurityContextLogoutHandler logoutHandler = new SecurityContextLogoutHandler();
-    @GetMapping("/login/zaloguj")
+    @GetMapping("/login/login")
     public ResponseEntity getsayHello() {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @PostMapping("/login/wyloguj")
+    @PostMapping("/login/logout")
     public ResponseEntity performLogout(Authentication authentication, HttpServletRequest request, HttpServletResponse response) {
         this.logoutHandler.setClearAuthentication(true);
         this.logoutHandler.setInvalidateHttpSession(true);

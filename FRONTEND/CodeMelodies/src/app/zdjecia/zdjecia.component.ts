@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ZdjeciaComponent {
   zdjecia: any[] = [];
-  private apiUrl = 'http://localhost:8080/api/zdjecia/ids';
-  private photoBaseUrl = 'http://localhost:8080/api/zdjecie/';
+  private apiUrl = 'http://localhost:8080/api/photos/ids';
+  private photoBaseUrl = 'http://localhost:8080/api/photo/';
 
   constructor(private http: HttpClient) {}
 
@@ -25,7 +25,7 @@ export class ZdjeciaComponent {
   }
 
   fetchPhoto(id: string) {
-    const photoUrl = this.photoBaseUrl + id; // Construct the URL for each photo
+    const photoUrl = this.photoBaseUrl + id;
     this.http.get(photoUrl, { responseType: 'blob' }).subscribe(
       blob => {
         const objectURL = URL.createObjectURL(blob);

@@ -27,10 +27,10 @@ interface SocialMedia {
 })
 export class KontaktComponent {
   events: Event[] = [];
-  private apiWydarzeniaUrl = 'http://localhost:8080/api/wydarzenia';
+  private apiWydarzeniaUrl = 'http://localhost:8080/api/events';
   socialMediaLinks: SocialMedia[] = [];
-  private apiSocialMediaUrl = 'http://localhost:8080/api/socialmedia'; // Your first endpoint
-  private iconBaseUrl = 'http://localhost:8080/api/ikona/'; // Base URL for icons
+  private apiSocialMediaUrl = 'http://localhost:8080/api/socialmedia';
+  private iconBaseUrl = 'http://localhost:8080/api/icon/';
 
 
   constructor(private http: HttpClient) {}

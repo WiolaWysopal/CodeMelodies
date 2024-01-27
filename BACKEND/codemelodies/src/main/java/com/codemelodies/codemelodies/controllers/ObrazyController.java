@@ -31,7 +31,7 @@ public class ObrazyController {
         this.iconRepository = iconRepository;
     }
 
-    @GetMapping(value = "/zdjecie/{uuid}", produces = MediaType.IMAGE_PNG_VALUE)
+    @GetMapping(value = "/photo/{uuid}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getZdjecie(@PathVariable UUID uuid) {
         logger.info(uuid.toString());
         Optional<Obraz> znalezionyObraz = obrazRepository.findById(uuid);
@@ -42,7 +42,7 @@ public class ObrazyController {
         }
     }
 
-    @GetMapping(value = "/zdjecia/ids", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/photos/ids", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UUID>> getZdjeciaIds() {
         //logger.info("");
         UUID excludedUuid = UUID.fromString("ba5ae4f1-377d-4721-b690-a6edeba36449");
@@ -55,7 +55,7 @@ public class ObrazyController {
     }
 
 
-    @GetMapping(value = "/ikona/{uuid}", produces = MediaType.IMAGE_PNG_VALUE)
+    @GetMapping(value = "/icon/{uuid}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getIkona(@PathVariable UUID uuid) {
         Optional<Icon> znalezionaIkona = iconRepository.findById(uuid);
         if (znalezionaIkona.isPresent()) {

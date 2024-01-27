@@ -13,7 +13,7 @@ export class NavbarComponent {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/logowanie']);
+    this.router.navigate(['/login']);
   }
  
   isLoggedIn(){

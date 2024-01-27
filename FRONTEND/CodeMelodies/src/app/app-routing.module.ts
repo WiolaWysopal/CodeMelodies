@@ -11,10 +11,10 @@ const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'home', component: HomeComponent, pathMatch: 'full'},
   {path: 'youtube', component: YouTubeComponent, pathMatch: 'full'},
-  {path: 'publikacje', component: PublikacjeComponent, pathMatch: 'full'},
-  {path: 'zdjecia', component: ZdjeciaComponent, pathMatch: 'full'},
-  {path: 'kontakt', component: KontaktComponent, pathMatch: 'full'},
-  {path: 'logowanie', component: LogowanieComponent, pathMatch: 'full'}
+  {path: 'publications', component: PublikacjeComponent, pathMatch: 'full'},
+  {path: 'photos', component: ZdjeciaComponent, pathMatch: 'full'},
+  {path: 'contact', component: KontaktComponent, pathMatch: 'full'},
+  {path: 'login', component: LogowanieComponent, pathMatch: 'full'}
 ];
 
 
