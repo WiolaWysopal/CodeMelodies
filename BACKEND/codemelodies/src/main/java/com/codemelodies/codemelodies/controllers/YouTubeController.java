@@ -27,7 +27,7 @@ public class YouTubeController {
     @GetMapping(value = "/youtube", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<YouTubeVideo>> getYouTubeVideos() {
         List<YouTubeVideo> youTubeVideos = youTubeVideoRepository.findAll();
-        if(youTubeVideos != null && !(youTubeVideos.isEmpty())){
+        if(!(youTubeVideos.isEmpty())){
             return ResponseEntity.ok(youTubeVideos);
         } else {
             return new ResponseEntity<List<YouTubeVideo>>(HttpStatus.NOT_FOUND);

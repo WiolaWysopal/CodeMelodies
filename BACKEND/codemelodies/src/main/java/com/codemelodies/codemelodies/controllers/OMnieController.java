@@ -21,10 +21,6 @@ public class OMnieController {
     @GetMapping("/omnie")
     public ResponseEntity<String> getOMnie() {
         Optional<Biogram> biogram = biogramRepository.findLatestBiogram();
-        if (biogram.isPresent()) {
-            return ResponseEntity.ok(biogram.get().getBiogramContent());
-       } else {
-            return ResponseEntity.notFound().build();
-       }
+        return biogram.map(value -> ResponseEntity.ok(value.getBiogramContent())).orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

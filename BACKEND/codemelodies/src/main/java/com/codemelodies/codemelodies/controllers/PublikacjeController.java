@@ -31,7 +31,7 @@ public class PublikacjeController {
     @GetMapping("/publikacje")
     public ResponseEntity<List<Publikacja>> getPublikacje() {
         List<Publikacja> publikacje = publikacjaRepository.findAll();
-        if (publikacje != null && !(publikacje.isEmpty())){
+        if (!(publikacje.isEmpty())){
             return ResponseEntity.ok(publikacje);
         } else {
             return new ResponseEntity<List<Publikacja>>(HttpStatus.NOT_FOUND);
@@ -41,10 +41,6 @@ public class PublikacjeController {
     @GetMapping(value = "/publikacja/{uuid}", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<byte[]> getPublikacja(@PathVariable UUID uuid) {
         Optional<PublicationFile> publicationFile = publicationFileRepository.findById(uuid);
-        if (publicationFile.isPresent()){
-            return ResponseEntity.ok(publicationFile.get().getFile());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return publicationFile.map(file -> ResponseEntity.ok(file.getFile())).orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

@@ -13,7 +13,4 @@ public class Obraz {
     private UUID id;
     @Column(name = "image", columnDefinition="bytea")
     private byte[] image;
-
-    // Gettery generowane są przez Lombok
-    // @Lob psuła działanie endpointa: https://stackoverflow.com/questions/75042081/hibernate-6-postgres-and-bytea
 }
