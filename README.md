@@ -15,6 +15,8 @@ Aplikacja *CodeMelodies* oferuje następujące funkcje:
 - 💌 Kontakt:
  > Skontaktuj się bezpośrednio z artystką, zadając pytania lub wyrażając swoje uwagi.
 
+ ![App Sample Screens](image-3.png)
+
 ## Struktura projektu
 
 ### Wybrane frameworki:
